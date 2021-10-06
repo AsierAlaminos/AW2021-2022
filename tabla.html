@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLAS</title>
+</head>
+<body>
+    <h2>TABLA 1</h2>
+    <table border="1">
+        <tr>
+            <td>col1</td>
+            <td colspan="4">col2</td>
+            <td>col3</td>       
+        </tr>
+        <tr>
+            <td>col1</td>
+            <td colspan="4">
+                <table  border="1">
+                    <tr>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                    </tr>
+                    <tr>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                    </tr>
+                    <tr>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                    </tr>
+                    <tr>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                    </tr>
+                </table>
+            </td>
+            <td>col3</td>      
+        </tr>
+        <tr>
+            <td>col1</td>
+            <td colspan="4">
+                <table border="1">
+                    <tr>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                    </tr>
+                    <tr>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                    </tr>
+                    <tr>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                    </tr>
+                </table>
+            </td>
+            <td>col3</td>      
+        </tr>
+    </table>
+    <h2>TABLA 2</h2>
+    <table border="1">
+        <tr>
+            <td>Celda</td>
+            <td colspan="2">Celda</td>
+            <td>Celda</td>
+            <td>Celda</td>
+        </tr>
+        <tr>
+            <td>Celda</td>
+            <td colspan="2">Celda</td>
+            <td>Celda</td>
+            <td>Celda</td>
+        </tr>
+        <tr>
+            <td>Celda</td>
+            <td colspan="2">Celda</td>
+            <td>Celda</td>
+            <td>Celda</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Celda</td>
+            <td colspan="2">
+                <table border="1">
+                    <tr>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                    </tr>
+                    <tr>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                    </tr>
+                    <tr>
+                        <td>Celda</td>
+                        <td>Celda</td>
+                    </tr>
+                </table>
+            </td>
+            <td>Celda</td>
+            <td>Celda</td>
+        </tr>
+    </table>
+    <h2>TABLA 3</h2>
+    <table border="1">
+        <tr>
+            <td colspan="3">alfa</td>
+            <td>bravo</td>
+            <td rowspan="2">charlie</td>
+        </tr>
+        <tr>
+            <td>delta</td>
+            <td>echo</td>
+            <td>foxtrot</td>
+            <td>golf</td>
+        
+        </tr>
+        <tr>
+            <td>hotel</td>
+            <td colspan="3"; rowspan="2">india</td>
+            <td>juliet</td>
+        </tr>
+        <tr>
+            <td>kilo</td>
+            <td>lima</td>
+        </tr>
+        <tr>
+            <td>mike</td>
+            <td>november</td>
+            <td>oscar</td>
+            <td>papa</td>
+            <td>quebec</td>
+        </tr>
+    </table>
+    <h2>TABLA 4</h2>
+    <table border="1">
+        <tr>
+            <th>Level1</th>
+            <th>Level2</th>
+            <th>Level3</th>
+            <th>Info</th>
+            <th>Name</th>
+        </tr>
+        <tr>
+            <td rowspan="6">System</td>
+            <td rowspan="4">System apps</td>
+            <td rowspan="3">SystemEnv</td>
+            <td>App Test</td>
+            <td>foo</td>
+        </tr>
+        <tr>
+            <td>App Memory</td>
+            <td>foo</td>
+        </tr>
+        <tr>
+            <td>App Test</td>
+            <td>bar</td>
+        </tr>
+        <tr>
+            <td>SystemEnv2</td>
+            <td>App Test</td>
+            <td>bar</td>
+        </tr>
+        <tr>
+            <td rowspan="2">System Memory</td>
+            <td rowspan="2">Memory Test</td>
+            <td>Memory Func</td>
+            <td>foo</td>
+        </tr>
+        <tr>
+            <td>Apps Test</td>
+            <td>foo</td>
+        </tr>
+    </table>
+    <h2>TABLA 5</h2>
+    <table border="1"; style="padding: 0.5em;border: 1px solid rgba(0,0,0,0.2);">
+        <tr>
+            <td colspan="4"><center>Curso 2019/2010</center></td>
+        </tr>
+        <tr>
+            <td colspan="2"><center>1º ESO-A</center></td>
+            <td colspan="2"><center>1º ESO-B</center></td>
+        </tr>
+        <tr>
+            <td>Aprobados</td>
+            <td>Suspensos</td>
+            <td>Aprobados</td>
+            <td>Suspensos</td>
+        </tr>
+        <tr>
+            <td>68%</td>
+            <td>57%</td>
+            <td>32%</td>
+            <td>43%</td>
+        </tr>
+    </table>
+    <h2>TABLAS CON ESTILOS</h2>
+<!--    ESTILO 1
+    <style>
+        table, td, th {
+            border: 1px solid #ddd; text-align: left; }
+        table { 
+            border-collapse: collapse; width: 100%; }
+        th, td { 
+            padding: 15px; }
+    </style>-->
+<!--    ESTILO 2
+    <style>
+        table { 
+            border-collapse: collapse; width: 100%; }
+        th, td { 
+            padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+    </style>-->
+<!--    Estilo 3
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { text-align: left; padding: 8px; }
+        tr:hover {background-color: yellow;}
+    </style>-->
+<!--    Estilo 4
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { text-align: left; padding: 8px; }
+        tr:nth-child(even) {background-color: #f2f2f2;}
+    </style>-->
+<!--    Estilo 5
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { text-align: left; padding: 8px; }
+        tr:nth-child(even){background-color: #f2f2f2}
+        th { background-color: #04AA6D; color: white; }
+    </style>-->
+<!--    Estilo 6
+    <style>
+        table { width: 100%; } th { height: 70px; }
+    </style>-->
+<!--    Estilo 7
+    <style>
+        table { width: 50%; }
+    </style>-->
+<!--    Estilo 8
+    <style>
+        table, th, td { border: 1px solid black; }
+    </style>-->
+<!--    Estilo 9
+    <style>
+        table, td, th { border: 1px solid black; }
+    </style>-->
+<!--    <style>
+        table { width: 100%; border-collapse: collapse; }
+    </style>-->
+<!--    <style>
+        td { text-align: center; }
+    </style>-->
+    <table style="box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);">
+        <tr>
+            <th>Celda1</td>
+            <th>Celda2</td>
+            <th>Celda3</td>
+        </tr>
+        <tr>
+            <td>Celda4</td>
+            <td>Celda5</td>
+            <td>Celda6</td>
+        </tr>
+        <tr>
+            <td>Celda7</td>
+            <td>Celda8</td>
+            <td>Celda9</td>
+        </tr>
+    </table>
+    <h3>Estilo 1</h3>
+    <p>Se hacen los bordes de la tabla muy finas.</p>
+    <h3>Estilo 2</h3>
+    <p>Divide todas las filas con una linea pero las columnas parecen unidas</p>
+    <h3>Estilo 3</h3>
+    <p>Mantiene las celdas separadas sin lineas y rellena cada fila con el color amarillo de fondo cundo pasas el punetro por arriba</p>
+    <h3>Estilo 4</h3>
+    <p>Alterna las filas entre el color blanco y el gris</p>
+    <h3>Estilo 5</h3>
+    <p>Alterna las filas entre blanco y gris y a los titulos (th) les pone un color de fondo distinto</p>
+    <h3>Estilo 6</h3>
+    <p>Hace la tabla más grande</p>
+    <h3>Estilo 7</h3>
+    <p>Reduce el tamaño de la tabla a la mitad</p>
+    <h3>Estilo 8</h3>
+    <p>Añade un borde solido a la tabla</p>
+    <h3>Estilo 9</h3>
+    <p>Añade un borde solido a la tabla igual que el estilo anterior</p>
+    <h3>Estilo 10</h3>
+    <p>Hace mas anchas todas las tablas</p>
+    <h3>Estilo 11</h3>
+    <p>Alinea todos los td</p>
+    <h3>Estilo 12</h3>
+    <p>Añade una sombra alrededor de la tabla</p>
+</body>
+</html>

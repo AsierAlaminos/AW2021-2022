@@ -2,6 +2,7 @@
     border: 2px solid black;
     background-color:mediumblue;
     padding: 100px;
+    top:41px;
     width: auto;
     text-align: center;
 }
@@ -9,9 +10,12 @@
 .menu{
     border:2px solid black;
     background-color:mediumturquoise;
-    padding: 5px;
-    float: top;
+    width: 98.5%;
+    height: 40px;
     text-align: center;
+    top:0px;
+    position:fixed;
+
 }
 
 .intro{

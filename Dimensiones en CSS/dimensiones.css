@@ -1,0 +1,26 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+div {
+	width: 400px;
+	Padding-top: 20px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 0px;
+	Border-width: 4px;
+	border-style: solid;
+	border-color: #ea5;
+	margin: 0;
+}
+p {
+	width: 50%;
+	padding: 0;
+	border: 1px solid #333;
+	margin: 20px;
+}

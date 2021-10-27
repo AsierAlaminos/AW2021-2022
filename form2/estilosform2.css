@@ -1,0 +1,62 @@
+body{
+    background-image: url(rayasfondodorm.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+label, h1, h3{
+    color: white;
+    font-weight: bolder;
+}
+
+.base_form{
+    /*background-color:black;*/
+    width: 400px;
+    height: auto;
+    margin: 20px auto;
+    padding-top: 35px;
+    padding-left: 20px;
+    padding-bottom: 50px;
+    border-radius: 15px;
+    /*border: 2px solid white;*/
+}
+
+/*.base_form:hover{
+    width: 405px;
+    background-color:rgb(65, 61, 61);
+}*/
+
+.textinput{
+    background-color:rgb(197, 197, 197);
+    border-radius: 10px;
+    border: 2.5px solid black;
+    height: 20px;
+    width: 350px;
+    margin-top: 5px;
+    margin-left: 8px;
+}
+
+.acept{
+    background-color: rgb(197, 197, 197);
+    border-radius: 7px;
+    height: 30px;
+    width: 70px;
+    font-family: cursive;
+    font-size: 15px;
+    font-weight: bolder;
+    border: 2.5px solid black;
+    margin-left: 140px;
+}
+
+.cuenta{
+    background-color: rgb(197, 197, 197);
+    border-radius: 7px;
+    font-family: cursive;
+    font-size: 15px;
+    margin-left: 100px;
+    margin-top: 20px;
+    border: 2.5px solid black;
+    font-weight: bolder;
+}

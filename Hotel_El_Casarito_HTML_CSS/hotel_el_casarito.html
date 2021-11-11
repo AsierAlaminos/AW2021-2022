@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hotel_el_casarito.css">
+    <title>Hotel el Casarito</title>
+</head>
+<body>
+    <div class="barrasup">
+        <h2>Hotel el Casarito</h2>
+    </div>
+    <h4>Bienvenidos a La Alberca: <br>
+
+        "Apasionados visitantes, curiosos, perseguidores de belleza, paz, sosiego, paseos y buen comer. <br>
+        
+        La Alberca hermosa y serena se muestra al mundo como un lugar de retiro<br> donde el alma y el cuerpo encuentran remansos de paz para aquellos que huyen <br>del mundanal ruido y de las prisas.</h4>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="imagenes\estatua.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="imagenes\plaza_cruz.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="imagenes\general.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="imagenes\plaza_cruzx2.jpg" style="width:100%">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+       <!-- <div style="text-align:center">
+          <span class="dot one" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span> -->
+    </div>
+
+    <h3>Precios</h3>
+    <table class="tabla">
+        <tr>
+            <th>Mes</th>
+            <td>Enero</td>
+            <td>Febrero</td>
+            <td>Marzo</td>
+            <td>Marzo</td>
+            <td>Abril</td>
+            <td>Mayo</td>
+            <td>Junio</td>
+            <td>Julio</td>
+            <td>Agosto</td>
+            <td>Septiembre</td>
+            <td>Octubre</td>
+            <td>Noviembre</td>
+            <td>Diciembre</td>
+        </tr>
+        <tr>
+            <th>Precios</th>
+            <td>18€ por noche</td>
+            <td>12€ por noche</td>
+            <td>10€ por noche</td>
+            <td>12€ por noche</td>
+            <td>19€ por noche</td>
+            <td>15€ por noche</td>
+            <td>14€ por noche</td>
+            <td>24€ por noche</td>
+            <td>27€ por noche</td>
+            <td>20€ por noche</td>
+            <td>17€ por noche</td>
+            <td>15€ por noche</td>
+            <td>20€ por noche</td>
+        </tr>
+    </table>
+
+    <div class="contenedor">
+        <div class="container containeruno">
+            <img class="imagen" src="imagenes\habitacionuno.jpg">
+            <div class="overlay overlayuno">
+                <div class="texto">Reservar</div>
+            </div>
+        </div>
+        <div class="container containerdos">
+            <img class="imagen" src="imagenes\habitaciondos.jpg">
+            <div class="overlay overlayuno">
+                <div class="texto">Reservar</div>
+            </div>
+        </div>
+        <div class="container containertres">
+            <img class="imagen" src="imagenes\habitaciontres.jpg">
+            <div class="overlay overlayuno">
+                <div class="texto">Reservar</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+body, html{
+    height: 100%;
+}
+
+.parayax{
+    height: 100%;
+    background-image: url("rayasfondoform.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

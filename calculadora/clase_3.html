@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var operando1="";
+        var operacion="";
+        var operando2="";
+
+        var pulsar=function(num){
+            if(num=="resultado"){
+                document.getElementById('pantalla').innerHTML="";
+                var res=sumar(operando1, operando2)
+                document.getElementById('pantalla').innerHTML="res"
+            }
+            if (num=='sumar'){
+                document.getElementById('pantalla').innerHTML="";
+                operacion="sumar";//num
+            }else if(operacion==""){
+                operando1+=num;
+                document.getElementById('pantalla').innerHTML=operando1;
+            }else{
+                operando2+=num;
+                document.getElementById('pantalla').innerHTML=operando2;
+            }
+        }
+        var sumar=function(operando1, operando2){
+            if (operacion=="resultado"){
+                return Number(operando1)+Number(operando2);
+            }
+        }
+    </script>
+</head>
+<body>
+    <label id="pantalla">0</label> <br>
+    <button onclick="pulsar('0')">0</button>
+    <button onclick="pulsar('1')">1</button>
+    <button onclick="pulsar('2')">2</button>
+    <button onclick="pulsar('3')">3</button>
+    <button onclick="pulsar('4')">4</button>
+    <button onclick="pulsar('5')">5</button>
+    <button onclick="pulsar('6')">6</button>
+    <button onclick="pulsar('7')">7</button>
+    <button onclick="pulsar('8')">8</button>
+    <button onclick="pulsar('9')">9</button>
+    <button onclick="pulsar('sumar')">+</button>
+    <button onclick="pulsar('resultado')">=</button>
+</body>
+</html>

@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(0, 136, 226);
+}
+
+.boton{
+    border-radius: 25%;
+    border: 2px solid black;
+    height: 40px;
+    width: 40px;
+}
+
+.cero{
+    
+}

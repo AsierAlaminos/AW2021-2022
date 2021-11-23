@@ -4,49 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculadora.css">
     <title>Document</title>
     <script>
-        var operando1="";
-        var operacion="";
-        var operando2="";
+        var operando1 = '';
+        var operacion = '';
+        var operando2 = '';
 
-        var pulsar=function(num){
-            if(num=="resultado"){
-                document.getElementById('pantalla').innerHTML="";
-                var res=sumar(operando1, operando2)
-                document.getElementById('pantalla').innerHTML="res"
-            }
-            if (num=='sumar'){
-                document.getElementById('pantalla').innerHTML="";
-                operacion="sumar";//num
-            }else if(operacion==""){
+        var pulsar = function (num){           
+            if (num == 'resultado' & operacion=="sumar"){
+                var resultado_final = sumar (operando1, operando2);
+                document.getElementById('pantalla').innerHTML = resultado_final;
+            }else if(num=="resultado" & operacion=="restar"){
+                var resultado_final=restar(operando1, operando2);
+                document.getElementById("pantalla").innerHTML=resultado_final;
+            }else if(num=="resultado" & operacion=="multiplicar"){
+                var resultado_final=multiplicar(operando1, operando2);
+                document.getElementById("pantalla").innerHTML=resultado_final;
+            }else if(num=="resultado" & operacion=="dividir"){
+                var resultado_final=dividir(operando1, operando2)
+                document.getElementById("pantalla").innerHTML=resultado_final;
+            }else if (num == 'sumar') {
+                document.getElementById('pantalla').innerHTML = '';
+                operacion = 'sumar'; // num
+            }else if (num=="restar"){
+                document.getElementById("pantalla").innerHTML="";
+                operacion="restar";
+            }else if(num=="multiplicar"){
+                document.getElementById("pantalla").innerHTML="";
+                operacion="multiplicar";
+            }else if(num=="dividir"){
+                document.getElementById("pantalla").innerHTML="";
+                operacion="dividir";
+            }else if (operacion == '') {
                 operando1+=num;
-                document.getElementById('pantalla').innerHTML=operando1;
-            }else{
+                document.getElementById('pantalla').innerHTML = operando1;
+            } else if (operacion == 'sumar' || operacion=="restar" || operacion=="dividir" || operacion=="multiplicar") {
                 operando2+=num;
-                document.getElementById('pantalla').innerHTML=operando2;
+                document.getElementById('pantalla').innerHTML = operando2;
+            }
+
+            if(num=="resultado"){
+                operando1=resultado_final;
+                operando2="";
+                cosole.log(operando1, operando2)
             }
         }
-        var sumar=function(operando1, operando2){
-            if (operacion=="resultado"){
-                return Number(operando1)+Number(operando2);
-            }
+
+        var sumar = function (operando1, operando2) {
+            console.log (Number(operando1) + Number(operando2));
+            return Number(operando1) + Number(operando2);
+
+        }
+
+        var restar =function(operando1, operando2){
+            return Number(operando1) - Number(operando2);
+        }
+
+        var multiplicar=function(operando1, operando2){
+            return Number(operando1) * Number(operando2);
+        }
+
+        var dividir=function(operando1, operando2){
+            return Number(operando1) / Number(operando2);
         }
     </script>
 </head>
 <body>
     <label id="pantalla">0</label> <br>
-    <button onclick="pulsar('0')">0</button>
-    <button onclick="pulsar('1')">1</button>
-    <button onclick="pulsar('2')">2</button>
-    <button onclick="pulsar('3')">3</button>
-    <button onclick="pulsar('4')">4</button>
-    <button onclick="pulsar('5')">5</button>
-    <button onclick="pulsar('6')">6</button>
-    <button onclick="pulsar('7')">7</button>
-    <button onclick="pulsar('8')">8</button>
-    <button onclick="pulsar('9')">9</button>
-    <button onclick="pulsar('sumar')">+</button>
-    <button onclick="pulsar('resultado')">=</button>
+    <button class="boton cero"; onclick="pulsar('0')">0</button>
+    <button class="boton uno"; onclick="pulsar('1')">1</button>
+    <button class="boton dos"; onclick="pulsar('2')">2</button>
+    <button class="boton tres"; onclick="pulsar('3')">3</button>
+    <button class="boton cuatro"; onclick="pulsar('4')">4</button>
+    <button class="boton cinco"; onclick="pulsar('5')">5</button>
+    <button class="boton seis"; onclick="pulsar('6')">6</button>
+    <button class="boton siete"; onclick="pulsar('7')">7</button>
+    <button class="boton ocho"; onclick="pulsar('8')">8</button>
+    <button class="boton nueve"; onclick="pulsar('9')">9</button>
+    <button class="boton mas"; onclick="pulsar('sumar')">+</button>
+    <button class="boton menos"; onclick="pulsar('restar')">-</button>
+    <button class="boton multip"; onclick="pulsar('multiplicar')">*</button>
+    <button class="boton dividir"; onclick="pulsar('dividir')">/</button>
+    <button class="boton igual"; onclick="pulsar('resultado')">=</button>
 </body>
 </html>

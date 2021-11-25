@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 12</title>
+    <script>
+        var comprobacion=function(){
+            var numero=document.getElementById("inputnum").value;
+            var intnumero=Number(numero)
+            var paroimpar= intnumero%2
+            if(paroimpar==0){
+                alert("El numero es par")
+            }else{
+                alert("El numero es impar")
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <label>Dime un número</label>
+    <input id="inputnum" type="text">
+    <button onclick="comprobacion()">comprobar</button>
+</body>
+</html>

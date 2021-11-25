@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 11</title>
+    <script>
+        
+        var comprobar=function(){
+            var nota=document.getElementById("notainput").value;
+            var intnota=Number(nota)
+            if (intnota=>0 && intnota<=4){
+                document.getElementById("mensaje").innerHTML="Estas suspenso";
+            }else if(intnota=>5 & intnota<=10){
+                document.getElementById("mensaje").innerHTML="Estas aprobado";
+            }else{
+                document.getElementById("mensaje").innerHTML="El número no esta entre el 0 y el 10";
+            }
+        }
+    </script>
+</head>
+<body>
+    <label>¿Qué nota tienes?</label>
+    <input id="notainput" type="text">
+    <button onclick="comprobar()">comprobar</button> <br>
+    <label id="mensaje">=</label>
+</body>
+</html>

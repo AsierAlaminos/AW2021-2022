@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 9</title>
+    <script>
+        var comprobador=function(){
+            edad=document.getElementById("edad").value;
+            edad=Number(edad)
+            if (edad<18){
+                alert("Eres menor de edad")
+            }else{
+                alert("Eres mayor de edad")
+            }
+        }
+    </script>
+</head>
+<body>
+    <label>¿Que edad tienes?</label>
+    <input type="text" id="edad">
+    <button onclick="comprobador()">Comprobar</button>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 15</title>
+    <script>
+        var numfilas=prompt("Dime un número de filas: ");
+        var numcolumn=prompt("Dime un número de columnas: ");
+        var numfilas=Number(numfilas)
+        var numcolumn=Number(numcolumn)
+        function genera_tabla() {
+            var body = document.getElementsByTagName("body")[0];
+            var tabla   = document.createElement("table");
+            var tblBody = document.createElement("tbody");
+            for (var i = 0; i < numfilas; i++) {
+              var hilera = document.createElement("tr");
+          
+              for (var j = 0; j < numcolumn; j++) {
+                var celda = document.createElement("td");
+                var textoCelda = document.createTextNode("celda en la hilera "+i+", columna "+j);
+                celda.appendChild(textoCelda);
+                hilera.appendChild(celda);
+              }
+          
+              tblBody.appendChild(hilera);
+            }
+            tabla.appendChild(tblBody);
+            body.appendChild(tabla);
+            tabla.setAttribute("border", "2");
+          }
+    </script>
+</head>
+<body>
+    <!--el botón tarda en cargar-->
+    <button onclick="genera_tabla()">hacer tabla</button>
+</body>
+</html>

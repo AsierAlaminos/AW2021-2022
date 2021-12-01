@@ -64,3 +64,36 @@ a:hover{
     border-radius: 10px;
     box-shadow: 10px 20px 20px 0px rgb(0, 0, 0), 0px 0px 0px 0 rgba(0, 0, 0, 0.479);
 }
+
+.social_network{
+    position: relative;
+}
+
+.social_network:hover .redes_sociales{
+    width: 160.6px;
+    height: 20px;
+    background-color: #fbb829;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.redes_sociales{
+    width: 0px;
+    height: 0px;
+    font-size: 0px;
+    position:relative;
+    color: black;
+    background-color: #fbb829;
+}
+
+.social_network:hover .container{
+    background-color: #fbb829;
+    border-top-color: transparent;
+    box-shadow: 6px 6px 5px;
+}
+
+.container{
+    background-color: #fbb829;
+}

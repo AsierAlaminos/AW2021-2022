@@ -97,3 +97,45 @@ a:hover{
 .container{
     background-color: #fbb829;
 }
+
+.container_proyecto{
+    top: 160px;
+    margin-left: 40px;
+    position: absolute;
+    height: 110px;
+    width: 140px;
+    background-color: #136055;
+    border-radius: 15%;
+}
+
+.boton_burbuja{
+    background-color: #136055;
+    border: 0px;
+    right: 7px;
+    bottom: 10px;
+    position: absolute;
+    border-radius: 15%;
+}
+
+.texto_proyecto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 18pt;
+    top: 20px;
+    position: absolute;
+}
+
+.boton_burbuja:hover{
+    background-color: #104d43;
+}
+
+.burbuja{
+    background-color: #27a877;
+    height: 6px;
+    width: 6px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-top: 1px;
+}

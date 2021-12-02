@@ -7,6 +7,22 @@
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Proyects</title>
+    <script>
+        var mostrar_codigo=function(option){
+            var input_text=document.getElementById(option)
+            var boton_code=document.getElementById("boton_codigo")
+            if (input_text.style.display=="none"){
+                input_text.style.display="block";
+            }else if (input_text.style.display=="block"){
+                input_text.style.display="none";
+            }
+            if (boton_code.style.display=="none"){
+                boton_code.style.display=="block";
+            }else if(boton_code.style.display=="block"){
+                boton_code.style.display=="none";
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="barrasup">
@@ -24,12 +40,20 @@
         <a href="https://github.com/AsierAlaminos"><div class="opciones github"><i class="fab fa-github"> GitHub</i></div></a>
     </div>
     <div id="python" class="container_proyecto">
-        <a onclick="abrir()" class="texto_proyecto">Calculadora <br> en Python</a>
-        <button class="boton_burbuja">
-            <div class="burbuja_uno burbuja"></div>
-            <div class="burbuja_dos burbuja"></div>
-            <div class="burbuja_tres burbuja"></div>
+        <h6 class="texto_proyecto">Calculadora <br> en Terminal</h6>
+        <button onclick="mostrar_codigo('uno')" class="boton_burbuja">
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
         </button>
     </div>
+
+    <button class="boton_codigo" id="boton_codigo" onclick="mostrar_codigo('uno')" style="display: none;">
+        <textarea class="codigo" type="text" disabled id="uno" style="display: none;">
+        jfldkasj
+        jfdkaljf
+        fnd
+        </textarea>
+    </button>
 </body>
 </html>

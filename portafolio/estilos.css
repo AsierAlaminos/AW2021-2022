@@ -159,3 +159,46 @@ a:hover{
     height: 25%;
     position: relative;
 }
+
+.container_form{
+    top: 20%;
+    border: 2px solid #001933;
+}
+
+.contacto{
+    top: 80px;
+    position: absolute;
+}
+
+.texto_form{
+    font-size: 20pt;
+    font-weight: bolder;
+    color: rgb(145, 145, 145);
+    margin-top: 85px;
+    margin-left: 30%;
+    position: absolute;
+    float: left;
+}
+
+.nombre_form{
+    margin-left: 39%;
+}
+
+.numerotel_form{
+    margin-left: 29%;
+}
+
+.input_form{
+    max-width: 20%;
+    min-width: 20%;
+    max-height: 10%;
+    min-height: 10%;
+    margin-top: 90px;
+    margin-left: 48%;
+    background-color: rgba(189, 189, 189, 0.842);
+    border: 2px solid #136055;
+}
+
+.razon_formu{
+    margin-left: 40%;
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="codigo-binario.png">
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Proyects</title>
@@ -17,9 +18,9 @@
                 input_text.style.display="none";
             }
             if (boton_code.style.display=="none"){
-                boton_code.style.display=="block";
-            }else if(boton_code.style.display=="block"){
-                boton_code.style.display=="none";
+                boton_code.style.display="block";
+            }else if (boton_code.style.display=="block"){
+                boton_code.style.display="none";
             }
         }
     </script>
@@ -39,9 +40,18 @@
         </div>
         <a href="https://github.com/AsierAlaminos"><div class="opciones github"><i class="fab fa-github"> GitHub</i></div></a>
     </div>
-    <div id="python" class="container_proyecto">
+    <div id="python" class="calculadora_py">
         <h6 class="texto_proyecto">Calculadora <br> en Terminal</h6>
-        <button onclick="mostrar_codigo('uno')" class="boton_burbuja">
+        <button onclick="mostrar_codigo('uno')" class="boton_burbuja_calpy">
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+        </button>
+    </div>
+
+    <div id="html" class="calculadora_html">
+        <h6 class="texto_proyecto">Calculadora <br> en HTML</h6>
+        <button onclick="mostrar_codigo('dos')" class="boton_burbuja_calhtml">
             <div class="burbuja"></div>
             <div class="burbuja"></div>
             <div class="burbuja"></div>
@@ -50,9 +60,199 @@
 
     <button class="boton_codigo" id="boton_codigo" onclick="mostrar_codigo('uno')" style="display: none;">
         <textarea class="codigo" type="text" disabled id="uno" style="display: none;">
-        jfldkasj
-        jfdkaljf
-        fnd
+        from tqdm import tqdm
+        from time import sleep
+        
+        print("Hola, bienvenido a la calculadora.")
+        import os
+        operaciones=["S", "R", "M", "D", "E", "P", "s", "r", "m", "d", "e", "p", "Prueba"]
+        i=1
+        def suma(x, y):
+        
+            print("Resultado:", (x + y))
+        
+        while True:
+            #print(i)
+            i=i+1
+            print("S/s-Suma")
+            print("R/r-Resta")
+            print("M/m-Multiplicación")
+            print("D/d-Division")
+            print("E/e-Elevar a...")
+            print("P/p-Porcentajes")
+            operacion=input("¿Que quieres calcular:" )
+            if operacion=="Prueba":
+                print("1.-SUMA")
+                x = int(input("Dime un numero:"))
+                y = int(input("Dime otro:"))
+                print(suma(x, y))
+            if operacion in operaciones:
+                print("")
+            else:
+                print("Fallo en la sintaxis")
+            
+        #Suma
+            if operacion=="S" or operacion=="s":
+                print("1.-SUMA")
+                suma1=int(input("Dime un numero:" ))
+                suma2=int(input("Dime otro:" ))
+                for i in tqdm(range(50)):
+                    sleep(0.01)
+                print("COMPLETADO")
+                print("Resultado:", (suma1 + suma2))
+        #resta
+            if operacion=="R" or operacion=="r":
+                print("2.-RESTA")
+                resta1=int(input("Dime un numero:" ))
+                resta2=int(input("Dime otro:"))
+                for i in tqdm(range(50)):
+                    sleep(0.01)
+                print("COMPLETADO")
+                print("Resultado:", (resta1-resta2))
+        #multiplicación
+            if operacion=="M" or operacion=="m":
+                print("3.-MULTIPLICACION")
+                multi1=int(input("Dime un numero:" ))
+                multi2=int(input("Dime otro:" ))
+                for i in tqdm(range(50)):
+                    sleep(0.01)
+                print("COMPLETADO")
+                print("Resultado: ", (multi1*multi2))
+        #Division
+            if operacion=="D" or operacion=="d":
+                print("4.-DIVISION")
+                division1=int(input("Dime un numero:" ))
+                division2=int(input("Dime otro:" ))
+                for i in tqdm(range(50)):
+                    sleep(0.01)
+                print("COMPLETADO")
+                print("Resultado: ", (division1/division2))
+        #Elevar
+            if operacion=="E" or operacion=="e":
+                print("ELEVAR A...")
+                elevado=int(input("Dime un numero:" ))
+                elevador=int(input("¿A que numero lo quieres elevar?:"))
+                for i in tqdm(range(50)):
+                    sleep(0.01)
+                print("COMPLETADO")
+                print("Resultado: ", (elevado**elevador))
+        #Procentajesincrementar
+            if operacion=="P" or operacion=="p":
+                print("PORCENTAJES")
+                total=int(input("Dime el porcentaje que quieres sacar:" ))
+                parcial=int(input("De que numero:" ))
+                for i in tqdm(range(50)):
+                    sleep(0.01)
+                print("COMPLETADO")
+                print("Resultado: ", total*parcial/100 )
+            Si=input("¿Quieres continuar? (S/N)" )
+            if Si=="S" or Si=="s":
+                save=input("¿Quieres guardar la operacion?: (S/N)" )
+                if save=="S" or save=="s":
+                    continue
+                if save=="N" or save=="n":
+                    os.system("cls")
+                    continue
+            else:
+                    break
+        </textarea>
+    </button>
+
+    <button class="boton_codigo" id="boton_codigo" onclick="mostrar_codigo('dos')" style="display: none;">
+        <textarea class="codigo" type="text" disabled id="dos" style="display: none;">
+        <!--
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="calculadora.css">
+            <title>Document</title>
+            <script>
+                var operando1 = '';
+                var operacion = '';
+                var operando2 = '';
+        
+                var pulsar = function (num){           
+                    if (num == 'resultado' & operacion=="sumar"){
+                        var resultado_final = sumar (operando1, operando2);
+                        document.getElementById('pantalla').innerHTML = resultado_final;
+                    }else if(num=="resultado" & operacion=="restar"){
+                        var resultado_final=restar(operando1, operando2);
+                        document.getElementById("pantalla").innerHTML=resultado_final;
+                    }else if(num=="resultado" & operacion=="multiplicar"){
+                        var resultado_final=multiplicar(operando1, operando2);
+                        document.getElementById("pantalla").innerHTML=resultado_final;
+                    }else if(num=="resultado" & operacion=="dividir"){
+                        var resultado_final=dividir(operando1, operando2)
+                        document.getElementById("pantalla").innerHTML=resultado_final;
+                    }else if (num == 'sumar') {
+                        document.getElementById('pantalla').innerHTML = '';
+                        operacion = 'sumar'; // num
+                    }else if (num=="restar"){
+                        document.getElementById("pantalla").innerHTML="";
+                        operacion="restar";
+                    }else if(num=="multiplicar"){
+                        document.getElementById("pantalla").innerHTML="";
+                        operacion="multiplicar";
+                    }else if(num=="dividir"){
+                        document.getElementById("pantalla").innerHTML="";
+                        operacion="dividir";
+                    }else if (operacion == '') {
+                        operando1+=num;
+                        document.getElementById('pantalla').innerHTML = operando1;
+                    } else if (operacion == 'sumar' || operacion=="restar" || operacion=="dividir" || operacion=="multiplicar") {
+                        operando2+=num;
+                        document.getElementById('pantalla').innerHTML = operando2;
+                    }
+        
+                    if(num=="resultado"){
+                        operando1=resultado_final;
+                        operando2="";
+                        cosole.log(operando1, operando2)
+                    }
+                }
+        
+                var sumar = function (operando1, operando2) {
+                    console.log (Number(operando1) + Number(operando2));
+                    return Number(operando1) + Number(operando2);
+        
+                }
+        
+                var restar =function(operando1, operando2){
+                    return Number(operando1) - Number(operando2);
+                }
+        
+                var multiplicar=function(operando1, operando2){
+                    return Number(operando1) * Number(operando2);
+                }
+        
+                var dividir=function(operando1, operando2){
+                    return Number(operando1) / Number(operando2);
+                }
+            </script>
+        </head>
+        <body>
+            <label id="pantalla">0</label> <br>
+            <button class="boton cero"; onclick="pulsar('0')">0</button>
+            <button class="boton uno"; onclick="pulsar('1')">1</button>
+            <button class="boton dos"; onclick="pulsar('2')">2</button>
+            <button class="boton tres"; onclick="pulsar('3')">3</button>
+            <button class="boton cuatro"; onclick="pulsar('4')">4</button>
+            <button class="boton cinco"; onclick="pulsar('5')">5</button>
+            <button class="boton seis"; onclick="pulsar('6')">6</button>
+            <button class="boton siete"; onclick="pulsar('7')">7</button>
+            <button class="boton ocho"; onclick="pulsar('8')">8</button>
+            <button class="boton nueve"; onclick="pulsar('9')">9</button>
+            <button class="boton mas"; onclick="pulsar('sumar')">+</button>
+            <button class="boton menos"; onclick="pulsar('restar')">-</button>
+            <button class="boton multip"; onclick="pulsar('multiplicar')">*</button>
+            <button class="boton dividir"; onclick="pulsar('dividir')">/</button>
+            <button class="boton igual"; onclick="pulsar('resultado')">=</button>
+        </body>
+        </html>
+        -->
         </textarea>
     </button>
 </body>

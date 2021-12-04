@@ -98,7 +98,7 @@ a:hover{
     background-color: #fbb829;
 }
 
-.container_proyecto{
+.calculadora_py, .calculadora_html{
     top: 160px;
     margin-left: 70px;
     position: absolute;
@@ -108,13 +108,31 @@ a:hover{
     border-radius: 15%;
 }
 
-.boton_burbuja{
+.calculadora_html{
+    margin-left: 300px;
+}
+
+.boton_burbuja_calhtml, .boton_burbuja_calpy{
     background-color: #136055;
     border: 0px;
     right: 7px;
     bottom: 10px;
     position: absolute;
     border-radius: 15%;
+}
+
+
+.boton_burbuja_calpy:hover, .boton_burbuja_calhtml:hover{
+    background-color: #104d43;
+}
+
+.burbuja{
+    background-color: #27a877;
+    height: 6px;
+    width: 6px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-top: 1px;
 }
 
 .texto_proyecto{
@@ -128,36 +146,26 @@ a:hover{
     position: absolute;
 }
 
-.boton_burbuja:hover{
-    background-color: #104d43;
-}
-
-.burbuja{
-    background-color: #27a877;
-    height: 6px;
-    width: 6px;
-    border: 1px solid black;
-    border-radius: 50%;
-    margin-top: 1px;
-}
-
 .boton_codigo{
     position: fixed;
     top: -10px;
     left: -10px;
     width: 105%;
     height: 105%;
-    background-color: rgba(255, 255, 255, 0.568);
+    background-color: #a8a8a877;
     border: 0px;
     
 }
 
-.codigo{
-    top: 50%;
-    left: 50%;
+.codigo, .cal_html{
+    top: -6%;
+    left: 23%;
     width: 50%;
-    height: 25%;
+    height: 35%;
+    max-width: 50%;
+    max-height: 35%;
     position: relative;
+    color: black;
 }
 
 .container_form{
@@ -174,7 +182,7 @@ a:hover{
     font-size: 20pt;
     font-weight: bolder;
     color: rgb(145, 145, 145);
-    margin-top: 85px;
+    margin-top: 70px;
     margin-left: 30%;
     position: absolute;
     float: left;
@@ -193,7 +201,7 @@ a:hover{
     min-width: 20%;
     max-height: 10%;
     min-height: 10%;
-    margin-top: 90px;
+    margin-top: 75px;
     margin-left: 48%;
     background-color: rgba(189, 189, 189, 0.842);
     border: 2px solid #136055;

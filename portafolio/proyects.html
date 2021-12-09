@@ -9,18 +9,18 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Proyects</title>
     <script>
-        var mostrar_codigo=function(option){
-            var input_text=document.getElementById(option)
-            var boton_code=document.getElementById("boton_codigo")
-            if (input_text.style.display=="none"){
-                input_text.style.display="block";
-            }else if (input_text.style.display=="block"){
-                input_text.style.display="none";
+        var mostrar_codigo=function(numero){
+            if (document.getElementById(numero).style.display=="none"){
+                document.getElementById(numero).style.display="block";
+            }else{
+                document.getElementById(numero).style.display="none";
             }
-            if (boton_code.style.display=="none"){
-                boton_code.style.display="block";
-            }else if (boton_code.style.display=="block"){
-                boton_code.style.display="none";
+        }
+        var ocultar_boton=function(id){
+            if (document.getElementById(id).style.display=="none"){
+                document.getElementById(id).style.display="block";
+            }else{
+                document.getElementById(id).style.display="none";
             }
         }
     </script>
@@ -28,10 +28,10 @@
 <body>
     <div class="barrasup">
         <a href="index.html"><div class="opciones"><i class="fas fa-home"></i></div></a>
-        <a href="proyects.html"><div class="opciones"><i class="fas fa-code"> Proyects</i></div></a>
-        <a href="contact.html"><div class="opciones"><i class="fas fa-comment-dots"> Contact</i></div></a>
-        <a href="#Colab"><div class="opciones"><i class="fas fa-handshake"> Colaborations</i></div></a>
-        <div class="opciones social_network"><i class="fas fa-users"> Social Network</i>
+        <a href="proyects.html"><div class="opciones"><i class="fas fa-code"> Proyectos</i></div></a>
+        <a href="contact.html"><div class="opciones"><i class="fas fa-comment-dots"> Contacto</i></div></a>
+        <a href="colab.html"><div class="opciones"><i class="fas fa-handshake"> Colaboraciones</i></div></a>
+        <div class="opciones social_network"><i class="fas fa-users"> Redes Sociales</i>
             <div class="container">
                 <div class="redes_sociales">Instagram</div>
                 <div class="redes_sociales">Twitter</div>
@@ -41,25 +41,52 @@
         <a href="https://github.com/AsierAlaminos"><div class="opciones github"><i class="fab fa-github"> GitHub</i></div></a>
     </div>
     <div id="python" class="calculadora_py">
-        <h6 class="texto_proyecto">Calculadora <br> en Terminal</h6>
-        <button onclick="mostrar_codigo('uno')" class="boton_burbuja_calpy">
+        <h6 class="texto_proyecto">Calculadora <br> en Python</h6>
+        <button onclick="mostrar_codigo('boton_codigo_uno')" class="boton_burbuja">
             <div class="burbuja"></div>
             <div class="burbuja"></div>
             <div class="burbuja"></div>
         </button>
     </div>
 
-    <div id="html" class="calculadora_html">
+    <div id="html" class="ahorcado_python">
+        <h6 class="texto_proyecto">Ahorcado <br> en Python</h6>
+        <button onclick="mostrar_codigo('boton_codigo_dos')" class="boton_burbuja">
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+        </button>
+    </div>
+
+    <div id="html" class="ppt_python">
+        <h6 class="texto_proyecto">Piedra Papel <br> Tijeras<br> en Python</h6>
+        <button onclick="mostrar_codigo('boton_codigo_tres')" class="boton_burbuja">
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+        </button>
+    </div>
+
+    <div id="html" class="tic_tac_toe_python">
+        <h6 class="texto_proyecto">Tic Tac Toe <br> en Python</h6>
+        <button onclick="mostrar_codigo('boton_codigo_cuatro')" class="boton_burbuja">
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+        </button>
+    </div>
+
+    <div id="html" class="calculadora_htmljs">
         <h6 class="texto_proyecto">Calculadora <br> en HTML</h6>
-        <button onclick="mostrar_codigo('dos')" class="boton_burbuja_calhtml">
+        <button onclick="mostrar_codigo('boton_codigo_cinco')" class="boton_burbuja">
             <div class="burbuja"></div>
             <div class="burbuja"></div>
             <div class="burbuja"></div>
         </button>
     </div>
 
-    <button class="boton_codigo" id="boton_codigo" onclick="mostrar_codigo('uno')" style="display: none;">
-        <textarea class="codigo" type="text" disabled id="uno" style="display: none;">
+    <button class="boton_code" id="boton_codigo_uno" onclick="mostrar_codigo('boton_codigo_uno')" style="display: none;">
+        <textarea class="codigo" type="text" disabled id="uno">
         from tqdm import tqdm
         from time import sleep
         
@@ -155,104 +182,354 @@
                     continue
             else:
                     break
+        
         </textarea>
     </button>
 
-    <button class="boton_codigo" id="boton_codigo" onclick="mostrar_codigo('dos')" style="display: none;">
-        <textarea class="codigo" type="text" disabled id="dos" style="display: none;">
-        <!--
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="calculadora.css">
-            <title>Document</title>
-            <script>
-                var operando1 = '';
-                var operacion = '';
-                var operando2 = '';
+    <button class="boton_code" id="boton_codigo_dos" onclick="mostrar_codigo('boton_codigo_dos')" style="display: none;">
+        <textarea class="codigo" type="text" disabled id="dos">
+        import random
+
+        palabras= ["mexico", "colombia", "canada", "venezuela", "uruguay", "argentina", "guatemala", "panama", "ecuador", "españa", "francia","alemania", "noruega", "portugal"]
+        palabra_random=random.choice(palabras)
+        vidas=5
+        letras_palabra=list(palabra_random)
+        letras_adivinadas=[]
         
-                var pulsar = function (num){           
-                    if (num == 'resultado' & operacion=="sumar"){
-                        var resultado_final = sumar (operando1, operando2);
-                        document.getElementById('pantalla').innerHTML = resultado_final;
-                    }else if(num=="resultado" & operacion=="restar"){
-                        var resultado_final=restar(operando1, operando2);
-                        document.getElementById("pantalla").innerHTML=resultado_final;
-                    }else if(num=="resultado" & operacion=="multiplicar"){
-                        var resultado_final=multiplicar(operando1, operando2);
-                        document.getElementById("pantalla").innerHTML=resultado_final;
-                    }else if(num=="resultado" & operacion=="dividir"){
-                        var resultado_final=dividir(operando1, operando2)
-                        document.getElementById("pantalla").innerHTML=resultado_final;
-                    }else if (num == 'sumar') {
-                        document.getElementById('pantalla').innerHTML = '';
-                        operacion = 'sumar'; // num
-                    }else if (num=="restar"){
-                        document.getElementById("pantalla").innerHTML="";
-                        operacion="restar";
-                    }else if(num=="multiplicar"){
-                        document.getElementById("pantalla").innerHTML="";
-                        operacion="multiplicar";
-                    }else if(num=="dividir"){
-                        document.getElementById("pantalla").innerHTML="";
-                        operacion="dividir";
-                    }else if (operacion == '') {
-                        operando1+=num;
-                        document.getElementById('pantalla').innerHTML = operando1;
-                    } else if (operacion == 'sumar' || operacion=="restar" || operacion=="dividir" || operacion=="multiplicar") {
-                        operando2+=num;
-                        document.getElementById('pantalla').innerHTML = operando2;
-                    }
+        print("Bienvenido al ahorcado \nTienes 5 vidas para adivinar la palabra secreta")
+        print("La palaba secreta es de paises")
+        print(f"la palabra tiene una longitud de {len(palabra_random)} digitos")
+        print("_"*len(palabra_random))
+        while True:
+            while True:
+                letra=input("Dime una letra::: ")
+                if len(letra)!=1 or letra.isnumeric():
+                    print("ESCRIBE UNA SOLA LETRA")
+                else:
+                    if letra.lower() in letras_adivinadas:
+                        print("Ya has intentado esa letra")
+                        vidas-=1
+                        print(f"Te quedan {vidas} vidas")
+                    else:
+                        letras_adivinadas.append(letra)
+                        if letra.lower() in letras_palabra:
+                            print("Bien! Has adivinado una letra")
+                            break
+                        else:
+                            print("Esa letra no se encuentra en la palabra")
+                            vidas-=1
+                            print(f"Te quedan {vidas} vidas")
+                            break
+            if vidas==0:
+                print(f"No te quedan mas vidas, la palabra secreta era {palabra_random}")
+                break
         
-                    if(num=="resultado"){
-                        operando1=resultado_final;
-                        operando2="";
-                        cosole.log(operando1, operando2)
-                    }
-                }
+            estatus_actual = ""
         
-                var sumar = function (operando1, operando2) {
-                    console.log (Number(operando1) + Number(operando2));
-                    return Number(operando1) + Number(operando2);
+            letras_faltantes = 0
+            for letra in letras_palabra:
+                if letra in letras_adivinadas:
+                    estatus_actual = estatus_actual + letra
+                else:
+                    estatus_actual = estatus_actual + "_"
+                    letras_faltantes = letras_faltantes + 1
         
-                }
+            print(estatus_actual)
         
-                var restar =function(operando1, operando2){
-                    return Number(operando1) - Number(operando2);
-                }
         
-                var multiplicar=function(operando1, operando2){
-                    return Number(operando1) * Number(operando2);
-                }
+            if letras_faltantes == 0:
+                print("Felicidades haz ganado")
+                break
+        </textarea>
+    </button>
+    <button class="boton_code" id="boton_codigo_tres" onclick="mostrar_codigo('boton_codigo_tres')" style="display: none;">
+        <textarea class="codigo" type="text" disabled id="tres">
+        import random
+
+        opciones=["piedra", "papel", "tijeras"]
         
-                var dividir=function(operando1, operando2){
-                    return Number(operando1) / Number(operando2);
-                }
-            </script>
-        </head>
-        <body>
-            <label id="pantalla">0</label> <br>
-            <button class="boton cero"; onclick="pulsar('0')">0</button>
-            <button class="boton uno"; onclick="pulsar('1')">1</button>
-            <button class="boton dos"; onclick="pulsar('2')">2</button>
-            <button class="boton tres"; onclick="pulsar('3')">3</button>
-            <button class="boton cuatro"; onclick="pulsar('4')">4</button>
-            <button class="boton cinco"; onclick="pulsar('5')">5</button>
-            <button class="boton seis"; onclick="pulsar('6')">6</button>
-            <button class="boton siete"; onclick="pulsar('7')">7</button>
-            <button class="boton ocho"; onclick="pulsar('8')">8</button>
-            <button class="boton nueve"; onclick="pulsar('9')">9</button>
-            <button class="boton mas"; onclick="pulsar('sumar')">+</button>
-            <button class="boton menos"; onclick="pulsar('restar')">-</button>
-            <button class="boton multip"; onclick="pulsar('multiplicar')">*</button>
-            <button class="boton dividir"; onclick="pulsar('dividir')">/</button>
-            <button class="boton igual"; onclick="pulsar('resultado')">=</button>
-        </body>
-        </html>
-        -->
+        def operador(jugador):
+            eleccion=random.choice(opciones)
+            if eleccion=="piedra":
+                print("✊ Piedra")
+            elif eleccion=="tijeras":
+                print("✀ Tijeras")
+            else:
+                print("📄 Papel")
+            jugador=jugador.lower()
+            if jugador not in opciones:
+                print("Elige Piedra Papel o Tijeras")
+            else:
+                if (eleccion=="piedra" and jugador=="piedra") or (eleccion=="papel" and jugador=="papel") or (eleccion=="tijeras" and jugador=="tijeras"):
+                    print("Empate")
+                else:
+                    if (eleccion=="piedra" or jugador=="piedra") and (jugador=="papel" or eleccion=="papel"):
+                        print("Papel envuelve a Piedra")
+                    elif (eleccion=="tijeras" or jugador=="tijeras") and (jugador=="piedra" or eleccion=="piedra"):
+                        print("Piedra aplasta Tijeras")
+                    elif (eleccion=="papel" or jugador=="papel") and (jugador=="tijeras" or eleccion=="tijeras"):
+                        print("Tijeras cortan el Papel")
+        
+        
+        print("Bienvenido al juego de Piedra, Papel y Tijeras.")
+        operador(input(":::"))
+        </textarea>
+    </button>
+    <button class="boton_code" id="boton_codigo_cuatro" onclick="mostrar_codigo('boton_codigo_cuatro')" style="display: none;">
+        <textarea class="codigo" type="text" disabled id="cuatro">
+            import random
+
+
+            class TicTacToe:
+            
+                def __init__(self):
+                    self.board = []
+            
+                def create_board(self):
+                    for i in range(3):
+                        row = []
+                        for j in range(3):
+                            row.append('-')
+                        self.board.append(row)
+            
+                def get_random_first_player(self):
+                    return random.randint(0, 1)
+            
+                def fix_spot(self, row, col, player):
+                    self.board[row][col] = player
+            
+                def is_player_win(self, player):
+                    win = None
+            
+                    n = len(self.board)
+            
+                    # checking rows
+                    for i in range(n):
+                        win = True
+                        for j in range(n):
+                            if self.board[i][j] != player:
+                                win = False
+                                break
+                        if win:
+                            return win
+            
+                    # checking columns
+                    for i in range(n):
+                        win = True
+                        for j in range(n):
+                            if self.board[j][i] != player:
+                                win = False
+                                break
+                        if win:
+                            return win
+            
+                    # checking diagonals
+                    win = True
+                    for i in range(n):
+                        if self.board[i][i] != player:
+                            win = False
+                            break
+                    if win:
+                        return win
+            
+                    win = True
+                    for i in range(n):
+                        if self.board[i][n - 1 - i] != player:
+                            win = False
+                            break
+                    if win:
+                        return win
+                    return False
+            
+                    for row in self.board:
+                        for item in row:
+                            if item == '-':
+                                return False
+                    return True
+            
+                def is_board_filled(self):
+                    for row in self.board:
+                        for item in row:
+                            if item == '-':
+                                return False
+                    return True
+            
+                def swap_player_turn(self, player):
+                    return 'X' if player == 'O' else 'O'
+            
+                def show_board(self):
+                    for row in self.board:
+                        for item in row:
+                            print(item, end=" ")
+                        print()
+            
+                def start(self):
+                    self.create_board()
+            
+                    player = 'X' if self.get_random_first_player() == 1 else 'O'
+                    while True:
+                        print(f"Player {player} turn")
+            
+                        self.show_board()
+            
+                        # taking user input
+                        row, col = list(
+                            map(int, input("Enter row and column numbers to fix spot: ").split()))
+                        print()
+            
+                        # fixing the spot
+                        self.fix_spot(row - 1, col - 1, player)
+            
+                        # checking whether current player is won or not
+                        if self.is_player_win(player):
+                            print(f"Player {player} wins the game!")
+                            break
+            
+                        # checking whether the game is draw or not
+                        if self.is_board_filled():
+                            print("Match Draw!")
+                            break
+            
+                        # swapping the turn
+                        player = self.swap_player_turn(player)
+            
+                    # showing the final view of board
+                    print()
+                    self.show_board()
+            
+            
+            # starting the game
+            tic_tac_toe = TicTacToe()
+            tic_tac_toe.start()
+        </textarea>
+    </button>
+
+    <button class="boton_code" id="boton_codigo_cinco" onclick="mostrar_codigo('boton_codigo_cinco')" style="display: none;">
+        <textarea class="codigo" type="text" disabled id="cinco">
+            import random
+
+
+            class TicTacToe:
+            
+                def __init__(self):
+                    self.board = []
+            
+                def create_board(self):
+                    for i in range(3):
+                        row = []
+                        for j in range(3):
+                            row.append('-')
+                        self.board.append(row)
+            
+                def get_random_first_player(self):
+                    return random.randint(0, 1)
+            
+                def fix_spot(self, row, col, player):
+                    self.board[row][col] = player
+            
+                def is_player_win(self, player):
+                    win = None
+            
+                    n = len(self.board)
+            
+                    # checking rows
+                    for i in range(n):
+                        win = True
+                        for j in range(n):
+                            if self.board[i][j] != player:
+                                win = False
+                                break
+                        if win:
+                            return win
+            
+                    # checking columns
+                    for i in range(n):
+                        win = True
+                        for j in range(n):
+                            if self.board[j][i] != player:
+                                win = False
+                                break
+                        if win:
+                            return win
+            
+                    # checking diagonals
+                    win = True
+                    for i in range(n):
+                        if self.board[i][i] != player:
+                            win = False
+                            break
+                    if win:
+                        return win
+            
+                    win = True
+                    for i in range(n):
+                        if self.board[i][n - 1 - i] != player:
+                            win = False
+                            break
+                    if win:
+                        return win
+                    return False
+            
+                    for row in self.board:
+                        for item in row:
+                            if item == '-':
+                                return False
+                    return True
+            
+                def is_board_filled(self):
+                    for row in self.board:
+                        for item in row:
+                            if item == '-':
+                                return False
+                    return True
+            
+                def swap_player_turn(self, player):
+                    return 'X' if player == 'O' else 'O'
+            
+                def show_board(self):
+                    for row in self.board:
+                        for item in row:
+                            print(item, end=" ")
+                        print()
+            
+                def start(self):
+                    self.create_board()
+            
+                    player = 'X' if self.get_random_first_player() == 1 else 'O'
+                    while True:
+                        print(f"Player {player} turn")
+            
+                        self.show_board()
+            
+                        # taking user input
+                        row, col = list(
+                            map(int, input("Enter row and column numbers to fix spot: ").split()))
+                        print()
+            
+                        # fixing the spot
+                        self.fix_spot(row - 1, col - 1, player)
+            
+                        # checking whether current player is won or not
+                        if self.is_player_win(player):
+                            print(f"Player {player} wins the game!")
+                            break
+            
+                        # checking whether the game is draw or not
+                        if self.is_board_filled():
+                            print("Match Draw!")
+                            break
+            
+                        # swapping the turn
+                        player = self.swap_player_turn(player)
+            
+                    # showing the final view of board
+                    print()
+                    self.show_board()
+            
+            
+            # starting the game
+            tic_tac_toe = TicTacToe()
+            tic_tac_toe.start()
         </textarea>
     </button>
 </body>

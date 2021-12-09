@@ -20,16 +20,11 @@ body{
     margin-left: 8%;
 }
 
-/*.espacio_top{
-    width: 100px;
-    height: 40px;
-}*/
-
 .texto_div{
     float: left;
     height:unset;
     margin-top: 14%;
-    margin-left: 30%;
+    margin-left: 23%;
     border: 2.5px solid white;
     border-radius: 10px;
     box-shadow: 10px 20px 20px 0px rgb(0, 0, 0), 0px 0px 0px 0 rgba(0, 0, 0, 0.479);
@@ -49,6 +44,7 @@ h5{
 
 a{
     color: black;
+    text-decoration: none;
 }
 
 a:hover{
@@ -98,7 +94,7 @@ a:hover{
     background-color: #fbb829;
 }
 
-.calculadora_py, .calculadora_html{
+.calculadora_py, .ahorcado_python, .ppt_python, .tic_tac_toe_python, .calculadora_htmljs{
     top: 160px;
     margin-left: 70px;
     position: absolute;
@@ -108,11 +104,23 @@ a:hover{
     border-radius: 15%;
 }
 
-.calculadora_html{
+.ahorcado_python{
     margin-left: 300px;
 }
 
-.boton_burbuja_calhtml, .boton_burbuja_calpy{
+.ppt_python{
+    margin-left: 530px;
+}
+
+.tic_tac_toe_python{
+    margin-left: 760px;
+}
+
+.calculadora_htmljs{
+    margin-left: 990px;
+}
+
+.boton_burbuja{
     background-color: #136055;
     border: 0px;
     right: 7px;
@@ -122,7 +130,7 @@ a:hover{
 }
 
 
-.boton_burbuja_calpy:hover, .boton_burbuja_calhtml:hover{
+.boton_burbuja:hover{
     background-color: #104d43;
 }
 
@@ -146,7 +154,7 @@ a:hover{
     position: absolute;
 }
 
-.boton_codigo{
+.boton_code{
     position: fixed;
     top: -10px;
     left: -10px;
@@ -157,13 +165,12 @@ a:hover{
     
 }
 
-.codigo, .cal_html{
+.codigo{
     top: -6%;
-    left: 23%;
     width: 50%;
-    height: 35%;
+    height: 40%;
     max-width: 50%;
-    max-height: 35%;
+    max-height: 40%;
     position: relative;
     color: black;
 }
@@ -209,4 +216,50 @@ a:hover{
 
 .razon_formu{
     margin-left: 40%;
+}
+
+.enviar{
+    padding: 1%;
+    width: 5%;
+    height: 7%;
+    background-color:#016386;
+    border: 2px solid black;
+    border-radius: 15%;
+    box-shadow: 4px 4px 4px;
+    position: absolute;
+    margin-top: 2%;
+    left: 45%;
+}
+
+.enviar:hover{
+    background-color: #01506d;
+    box-shadow: 0px 0px 0px;
+}
+
+.empresas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #136055;
+    position: relative;
+    margin-top: 10%;
+    margin-left: 1%;
+    float: left;
+    width: 7%;
+    padding: 4%;
+    border: 2px solid #001933;
+    transition: padding 1s;
+}
+
+.empresas:hover{
+    padding: 5%;
+}
+
+.electroeco{
+    margin-left: 7%;
+}
+
+.electroecoimg{
+    width: auto;
+
 }

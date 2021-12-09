@@ -8,14 +8,22 @@
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Contact</title>
+    <script>
+        var correo=function(){
+            document.getElementById('nombre_form').value="";
+            document.getElementById('correo_form').value="";
+            document.getElementById('numero_form').value="";
+            document.getElementById('razon_form').value="";
+        }
+    </script>
 </head>
 <body>
     <div class="barrasup">
         <a href="index.html"><div class="opciones"><i class="fas fa-home"></i></div></a>
-        <a href="proyects.html"><div class="opciones"><i class="fas fa-code"> Proyects</i></div></a>
-        <a href="contact.html"><div class="opciones"><i class="fas fa-comment-dots"> Contact</i></div></a>
-        <a href="#Colab"><div class="opciones"><i class="fas fa-handshake"> Colaborations</i></div></a>
-        <div class="opciones social_network"><i class="fas fa-users"> Social Network</i>
+        <a href="proyects.html"><div class="opciones"><i class="fas fa-code"> Proyectos</i></div></a>
+        <a href="contact.html"><div class="opciones"><i class="fas fa-comment-dots"> Contacto</i></div></a>
+        <a href="colab.html"><div class="opciones"><i class="fas fa-handshake"> Colaboraciones</i></div></a>
+        <div class="opciones social_network"><i class="fas fa-users"> Redes Sociales</i>
             <div class="container">
                 <div class="redes_sociales">Instagram</div>
                 <div class="redes_sociales">Twitter</div>
@@ -44,5 +52,6 @@
             </p>
         </form>
     </div>
+    <button class="enviar" onclick="correo()">Enviar</button>
 </body>
 </html>

@@ -7,23 +7,8 @@
     <link rel="shortcut icon" href="codigo-binario.png">
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="portafolio.js"></script>
     <title>Proyects</title>
-    <script>
-        var mostrar_codigo=function(numero){
-            if (document.getElementById(numero).style.display=="none"){
-                document.getElementById(numero).style.display="block";
-            }else{
-                document.getElementById(numero).style.display="none";
-            }
-        }
-        var ocultar_boton=function(id){
-            if (document.getElementById(id).style.display=="none"){
-                document.getElementById(id).style.display="block";
-            }else{
-                document.getElementById(id).style.display="none";
-            }
-        }
-    </script>
 </head>
 <body>
     <div class="barrasup">
@@ -406,131 +391,105 @@
 
     <button class="boton_code" id="boton_codigo_cinco" onclick="mostrar_codigo('boton_codigo_cinco')" style="display: none;">
         <textarea class="codigo" type="text" disabled id="cinco">
-            import random
-
-
-            class TicTacToe:
-            
-                def __init__(self):
-                    self.board = []
-            
-                def create_board(self):
-                    for i in range(3):
-                        row = []
-                        for j in range(3):
-                            row.append('-')
-                        self.board.append(row)
-            
-                def get_random_first_player(self):
-                    return random.randint(0, 1)
-            
-                def fix_spot(self, row, col, player):
-                    self.board[row][col] = player
-            
-                def is_player_win(self, player):
-                    win = None
-            
-                    n = len(self.board)
-            
-                    # checking rows
-                    for i in range(n):
-                        win = True
-                        for j in range(n):
-                            if self.board[i][j] != player:
-                                win = False
-                                break
-                        if win:
-                            return win
-            
-                    # checking columns
-                    for i in range(n):
-                        win = True
-                        for j in range(n):
-                            if self.board[j][i] != player:
-                                win = False
-                                break
-                        if win:
-                            return win
-            
-                    # checking diagonals
-                    win = True
-                    for i in range(n):
-                        if self.board[i][i] != player:
-                            win = False
-                            break
-                    if win:
-                        return win
-            
-                    win = True
-                    for i in range(n):
-                        if self.board[i][n - 1 - i] != player:
-                            win = False
-                            break
-                    if win:
-                        return win
-                    return False
-            
-                    for row in self.board:
-                        for item in row:
-                            if item == '-':
-                                return False
-                    return True
-            
-                def is_board_filled(self):
-                    for row in self.board:
-                        for item in row:
-                            if item == '-':
-                                return False
-                    return True
-            
-                def swap_player_turn(self, player):
-                    return 'X' if player == 'O' else 'O'
-            
-                def show_board(self):
-                    for row in self.board:
-                        for item in row:
-                            print(item, end=" ")
-                        print()
-            
-                def start(self):
-                    self.create_board()
-            
-                    player = 'X' if self.get_random_first_player() == 1 else 'O'
-                    while True:
-                        print(f"Player {player} turn")
-            
-                        self.show_board()
-            
-                        # taking user input
-                        row, col = list(
-                            map(int, input("Enter row and column numbers to fix spot: ").split()))
-                        print()
-            
-                        # fixing the spot
-                        self.fix_spot(row - 1, col - 1, player)
-            
-                        # checking whether current player is won or not
-                        if self.is_player_win(player):
-                            print(f"Player {player} wins the game!")
-                            break
-            
-                        # checking whether the game is draw or not
-                        if self.is_board_filled():
-                            print("Match Draw!")
-                            break
-            
-                        # swapping the turn
-                        player = self.swap_player_turn(player)
-            
-                    # showing the final view of board
-                    print()
-                    self.show_board()
-            
-            
-            # starting the game
-            tic_tac_toe = TicTacToe()
-            tic_tac_toe.start()
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="calculadora.css">
+            <title>Document</title>
+            <script>
+                var operando1 = '';
+                var operacion = '';
+                var operando2 = '';
+        
+                var pulsar = function (num){           
+                    if (num == 'resultado' & operacion=="sumar"){
+                        var resultado_final = sumar (operando1, operando2);
+                        document.getElementById('pantalla').innerHTML = resultado_final;
+                    }else if(num=="resultado" & operacion=="restar"){
+                        var resultado_final=restar(operando1, operando2);
+                        document.getElementById("pantalla").innerHTML=resultado_final;
+                    }else if(num=="resultado" & operacion=="multiplicar"){
+                        var resultado_final=multiplicar(operando1, operando2);
+                        document.getElementById("pantalla").innerHTML=resultado_final;
+                    }else if(num=="resultado" & operacion=="dividir"){
+                        var resultado_final=dividir(operando1, operando2)
+                        document.getElementById("pantalla").innerHTML=resultado_final;
+                    }else if (num == 'sumar') {
+                        document.getElementById('pantalla').innerHTML = '';
+                        operacion = 'sumar'; // num
+                    }else if (num=="restar"){
+                        document.getElementById("pantalla").innerHTML="";
+                        operacion="restar";
+                    }else if(num=="multiplicar"){
+                        document.getElementById("pantalla").innerHTML="";
+                        operacion="multiplicar";
+                    }else if(num=="dividir"){
+                        document.getElementById("pantalla").innerHTML="";
+                        operacion="dividir";
+                    }else if (operacion == '') {
+                        operando1+=num;
+                        document.getElementById('pantalla').innerHTML = operando1;
+                    } else if (operacion == 'sumar' || operacion=="restar" || operacion=="dividir" || operacion=="multiplicar") {
+                        operando2+=num;
+                        document.getElementById('pantalla').innerHTML = operando2;
+                    }
+        
+                    if(num=="resultado"){
+                        operando1=resultado_final;
+                        operando2="";
+                        cosole.log(operando1, operando2)
+                    }
+                }
+        
+                var sumar = function (operando1, operando2) {
+                    console.log (Number(operando1) + Number(operando2));
+                    return Number(operando1) + Number(operando2);
+        
+                }
+        
+                var restar =function(operando1, operando2){
+                    return Number(operando1) - Number(operando2);
+                }
+        
+                var multiplicar=function(operando1, operando2){
+                    return Number(operando1) * Number(operando2);
+                }
+        
+                var dividir=function(operando1, operando2){
+                    return Number(operando1) / Number(operando2);
+                }
+            </script>
+        </head>
+        <body>
+            <label id="pantalla">0</label> <br>
+            <button class="boton cero"; onclick="pulsar('0')">0</button>
+            <button class="boton uno"; onclick="pulsar('1')">1</button>
+            <button class="boton dos"; onclick="pulsar('2')">2</button> <br>
+            <button class="boton tres"; onclick="pulsar('3')">3</button>
+            <button class="boton cuatro"; onclick="pulsar('4')">4</button>
+            <button class="boton cinco"; onclick="pulsar('5')">5</button> <br>
+            <button class="boton seis"; onclick="pulsar('6')">6</button>
+            <button class="boton siete"; onclick="pulsar('7')">7</button>
+            <button class="boton ocho"; onclick="pulsar('8')">8</button> <br>
+            <button class="boton nueve"; onclick="pulsar('9')">9</button>
+            <button class="boton mas"; onclick="pulsar('sumar')">+</button>
+            <button class="boton menos"; onclick="pulsar('restar')">-</button> <br>
+            <button class="boton multip"; onclick="pulsar('multiplicar')">*</button>
+            <button class="boton dividir"; onclick="pulsar('dividir')">/</button>
+            <button class="boton igual"; onclick="pulsar('resultado')">=</button>
+        </body>
+        </html>
         </textarea>
     </button>
+
+
+    <label id="boton_cambiante" class="switch">
+        <h4 id="letra_cambio">Ligth</h4>
+        <input id="ligth_dark" type="checkbox" onclick="cambiarmodo()">
+        <span class="slider round"></span>
+    </label>
 </body>
 </html>

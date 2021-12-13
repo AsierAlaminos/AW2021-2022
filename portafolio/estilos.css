@@ -4,12 +4,13 @@ body{
 
 .barrasup{
     width: 100%;
-    height: 12%;
+    height: 13%;
     background-color: #8800D0;
     position:fixed;
     margin-top: -8px;
     margin-left: -8px;
     float: left;
+    z-index: 1;
 }
 
 .opciones{
@@ -23,11 +24,16 @@ body{
 .texto_div{
     float: left;
     height:unset;
-    margin-top: 14%;
+    margin-top: 9%;
     margin-left: 23%;
     border: 2.5px solid white;
     border-radius: 10px;
     box-shadow: 10px 20px 20px 0px rgb(141, 141, 141);
+}
+
+.iconos_dispospositivos{
+    margin-top: 2%;
+    margin-left: 25%;
 }
 
 h5, h1{
@@ -81,36 +87,21 @@ a:hover{
 }
 
 .calculadora_py, .ahorcado_python, .ppt_python, .tic_tac_toe_python, .calculadora_htmljs{
-    top: 160px;
-    margin-left: 70px;
-    position: absolute;
+    margin-top: 10%;
+    margin-left: 8%;
+    position: relative;
+    float: left;
     height: 140px;
     width: 140px;
     background-color: #8800D0;
     border-radius: 15%;
 }
 
-.ahorcado_python{
-    margin-left: 300px;
-}
-
-.ppt_python{
-    margin-left: 530px;
-}
-
-.tic_tac_toe_python{
-    margin-left: 760px;
-}
-
-.calculadora_htmljs{
-    margin-left: 990px;
-}
-
 .boton_burbuja{
     background-color: #8800D0;
     border: 0px;
-    right: 7px;
-    bottom: 10px;
+    right: 7%;
+    bottom: 8%;
     position: absolute;
     border-radius: 15%;
 }
@@ -126,7 +117,7 @@ a:hover{
     width: 6px;
     border: 1px solid black;
     border-radius: 50%;
-    margin-top: 1px;
+    margin-top: 1%;
 }
 
 .texto_proyecto{
@@ -135,15 +126,15 @@ a:hover{
     align-items: center;
     font-weight: bolder;
     font-size: 18pt;
-    top: -16px;
-    left: 6px;
+    top: -18%;
+    left: 4%;
     position: absolute;
 }
 
 .boton_code{
     position: fixed;
-    top: -10px;
-    left: -10px;
+    top: -2%;
+    left: -2%;
     width: 105%;
     height: 105%;
     background-color: #a8a8a877;
@@ -159,24 +150,19 @@ a:hover{
     max-height: 40%;
     position: relative;
     color: black;
-    background-color: rgb(204, 112, 135);
+    background-color: #9700e9;
 }
 
 .container_form{
     top: 20%;
-    border: 2px solid ;
-}
-
-.contacto{
-    top: 80px;
-    position: absolute;
+    border: 2px solid white;
 }
 
 .texto_form{
     font-size: 20pt;
     font-weight: bolder;
-    color: rgb(145, 145, 145);
-    margin-top: 70px;
+    color: rgb(121, 121, 121);
+    margin-top: 5%;
     margin-left: 30%;
     position: absolute;
     float: left;
@@ -192,10 +178,9 @@ a:hover{
 
 .input_form{
     max-width: 20%;
-    min-width: 20%;
     max-height: 10%;
     min-height: 10%;
-    margin-top: 75px;
+    margin-top: 6%;
     margin-left: 48%;
     background-color: rgba(189, 189, 189, 0.842);
     border: 2px solid #9200E0;
@@ -212,15 +197,24 @@ a:hover{
     background-color:#8800D0;
     border: 2px solid black;
     border-radius: 15%;
-    box-shadow: 4px 4px 4px;
     position: absolute;
     margin-top: 2%;
     left: 45%;
 }
 
 .enviar:hover{
-    background-color: #8800D0;
-    box-shadow: 0px 0px 0px;
+    background-color: #530080;
+}
+
+.container_text_empresas{
+    position:absolute;
+    top: 16%;
+    left: 20%;
+    border: 2px solid white;
+    box-shadow: 6px 12px 12px rgb(141, 141, 141);
+    border-radius: 25px;
+    width: 50%;
+    height: 25%;
 }
 
 .empresas{
@@ -229,21 +223,33 @@ a:hover{
     align-items: center;
     background-color: #8800D0;
     position: relative;
-    margin-top: 10%;
+    margin-top: 3%;
     margin-left: 1%;
     float: left;
     width: 7%;
     padding: 4%;
     border: 2px solid #350050;
-    transition: padding 1s;
+    transition: width 1s;
 }
 
 .empresas:hover{
-    padding: 5%;
+    width: 9%;
 }
 
-.electroeco{
-    margin-left: 8%;
+.facebook{
+    margin-top: 14%;
+}
+
+.youtube{
+    margin-top: 28%;
+}
+
+.twitter{
+    margin-top: 42%;
+}
+
+.twitch{
+    margin-top: 56%;
 }
 
 .formas_contacto{
@@ -267,11 +273,11 @@ a:hover{
 .switch {
     position: fixed;
     display: inline-block;
-    width: 37px;
-    height: 20px;
+    width: 3%;
+    height: 3.3%;
     
     top: 88%;
-    left: 3%;
+    left: 2.8%;
 }
 
 .switch input { 
@@ -295,13 +301,14 @@ a:hover{
 .slider:before {
     position: absolute;
     content: "";
-    height: 16px;
-    width: 16px;
-    left: 4px;
-    bottom: 2px;
+    height: 77%;
+    width: 39%;
+    left: 12%;
+    bottom: 10%;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
+    border-radius: 50%;
 }
 
 input:checked + .slider {
@@ -313,9 +320,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-    -webkit-transform: translateX(15px);
-    -ms-transform: translateX(15px);
-    transform: translateX(15px);
+    -webkit-transform: translateX(99%);
+    -ms-transform: translateX(99%);
+    transform: translateX(99%);
 }
 
 .slider.round {

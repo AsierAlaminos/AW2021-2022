@@ -1,5 +1,4 @@
 function cambiarmodo(){
-    var boton_modo=document.getElementById("boton_cambiante");
     var web=document.body;
     var letracambio=document.getElementById("letra_cambio");
     var checkbox=document.getElementById("ligth_dark")
@@ -7,12 +6,14 @@ function cambiarmodo(){
     if (checkbox.checked==true){
         letracambio.style.color="white";
         letracambio.innerHTML="Dark";
-        checkbox.checked=true;
+        document.getElementById("form_container").style.borderColor="black";
+        document.getElementById("container_empresas").style.borderColor="white";
     }
     else{
         letracambio.style.color="black";
         letracambio.innerHTML="Light";
-        checkbox.checked=false;
+        document.getElementById("form_container").style.borderColor="white";
+        document.getElementById("container_empresas").style.borderColor="black";
     }
 };
 

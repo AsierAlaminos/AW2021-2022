@@ -14,6 +14,9 @@ body{
 }
 
 .opciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
     font-weight: bolder;
     font-size: 15pt;
     float: left;
@@ -21,18 +24,48 @@ body{
     margin-left: 8%;
 }
 
+.home{
+    margin-left: 16.2%;
+}
+
+.burbuja{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 10%;
+    margin-top: 15%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #9200E0;
+    font-size: 18pt;
+}
+
+.container_rrss{
+    font-size: 20pt;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 90%;
+    top: 76%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 0px;
+}
+
 .texto_div{
     float: left;
     height:unset;
     margin-top: 9%;
-    margin-left: 23%;
+    margin-left: 26%;
     border: 2.5px solid white;
     border-radius: 10px;
-    box-shadow: 10px 20px 20px 0px rgb(141, 141, 141);
+    box-shadow: 10px 15px 18px 0px rgb(141, 141, 141);
 }
 
 .iconos_dispospositivos{
-    margin-top: 2%;
+    margin-top: 3.9%;
     margin-left: 25%;
 }
 
@@ -57,34 +90,6 @@ a:hover{
     color: rgb(180, 179, 179);
 }
 
-.social_network{
-    position: relative;
-}
-
-.social_network:hover .redes_sociales{
-    width: 10.6px;
-    height: 20px;
-    background-color: #8800D0;
-    color: black;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 20px;
-}
-
-.redes_sociales{
-    width: 0px;
-    height: 0px;
-    font-size: 0px;
-    position:relative;
-    color: black;
-    background-color: #8800D0;
-}
-
-.social_network:hover .container{
-    background-color: #8800D0;
-    border-top-color: transparent;
-    box-shadow: 6px 6px 5px;
-}
 
 .calculadora_py, .ahorcado_python, .ppt_python, .tic_tac_toe_python, .calculadora_htmljs{
     margin-top: 10%;
@@ -111,7 +116,7 @@ a:hover{
     background-color: #530080;
 }
 
-.burbuja{
+.punto_opciones{
     background-color: white;
     height: 6px;
     width: 6px;
@@ -162,7 +167,7 @@ a:hover{
     font-size: 20pt;
     font-weight: bolder;
     color: rgb(121, 121, 121);
-    margin-top: 5%;
+    margin-top: 63px;
     margin-left: 30%;
     position: absolute;
     float: left;
@@ -170,6 +175,7 @@ a:hover{
 
 .nombre_form{
     margin-left: 39%;
+    margin-top: 86px;
 }
 
 .numerotel_form{
@@ -180,10 +186,15 @@ a:hover{
     max-width: 20%;
     max-height: 10%;
     min-height: 10%;
-    margin-top: 6%;
+    min-width: 18%;
+    margin-top: 70px;
     margin-left: 48%;
     background-color: rgba(189, 189, 189, 0.842);
     border: 2px solid #9200E0;
+}
+
+.primer_input_form{
+    margin-top: 95px;
 }
 
 .razon_formu{
@@ -206,6 +217,16 @@ a:hover{
     background-color: #530080;
 }
 
+.formas_contacto{
+    margin-left: 18%;
+    float: left;
+    margin-top: 7%;
+}
+
+.numtel{
+    margin-left: 5%;
+}
+
 .container_text_empresas{
     position:absolute;
     top: 16%;
@@ -226,40 +247,49 @@ a:hover{
     margin-top: 3%;
     margin-left: 1%;
     float: left;
-    width: 7%;
+    width: 9%;
     padding: 4%;
     border: 2px solid #350050;
     transition: width 1s;
 }
 
-.empresas:hover{
-    width: 9%;
+.empresas_colab:hover{
+    width: 11%;
 }
 
-.facebook{
+.facebook_colab{
     margin-top: 14%;
 }
 
-.youtube{
+.youtube_colab{
     margin-top: 28%;
 }
 
-.twitter{
+.twitter_colab{
     margin-top: 42%;
 }
 
-.twitch{
+.twitch_colab{
     margin-top: 56%;
 }
 
-.formas_contacto{
-    margin-left: 18%;
-    float: left;
-    margin-top: 7%;
+.texto_empresas{
+    color: black;
+    margin-left: 22%;
 }
 
-.numtel{
-    margin-left: 5%;
+.scrollbar::-webkit-scrollbar{
+    width: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-track{
+    background-color: #6800A0;
+}
+
+.scrollbar::-webkit-scrollbar-thumb{
+    background-color: rgb(169, 169, 169);
+    border-radius: 20px;
+    border: 2px solid #6800A0;
 }
 
 /*MODO OSCURO*/

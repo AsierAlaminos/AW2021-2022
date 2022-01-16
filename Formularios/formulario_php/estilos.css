@@ -1,0 +1,38 @@
+body{
+    height: 500px;
+    background-image: url("external-content.duckduckgo.com.jpg");
+    background-repeat:no-repeat;
+    background-position-x:center;
+    background-position-y:center;
+    background-size: cover;
+}
+
+.textusername{
+    color: black;
+    position: absolute;
+    margin-top: 7%;
+    margin-left: 41%;
+    font-size: 17pt;
+}
+
+.textpass{
+    color: black;
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 41%;
+    font-size: 17pt;
+}
+
+.username{
+    margin-top: 8%;
+    margin-left: 41%;
+}
+
+.password{
+    margin-top: 2%;
+    margin-left: 41%;
+}
+
+.enviar{
+    margin-left: 42%;
+}
